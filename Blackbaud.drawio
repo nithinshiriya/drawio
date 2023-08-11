@@ -1,9 +1,42 @@
-<mxfile host="app.diagrams.net" modified="2023-08-11T20:20:16.206Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.200" version="21.6.8" etag="SNIRtPH6cXgyv8Eu1CTq" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-11T20:45:34.438Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.200" etag="knJIHUORKeMMm1hu8zw5" version="21.6.8" type="github">
   <diagram name="Page-1" id="BSMdY3fPxJJTm8wq_SMq">
-    <mxGraphModel>
+    <mxGraphModel dx="1379" dy="1864" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-3" value="BellesBoard" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+          <mxGeometry x="85" y="80" width="340" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-7" value="Nav to Profile Page" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="QBbDs8d1V5HzIHIY1PE4-3">
+          <mxGeometry x="25" y="40" width="295" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-8" value="&lt;b&gt;&quot;Account Link&quot;&lt;/b&gt;&lt;br&gt;Retrieve the &#39;Constituent&#39; ID by searching for the email address within the Blackbaud account." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="QBbDs8d1V5HzIHIY1PE4-3">
+          <mxGeometry x="25" y="90" width="295" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-4" value="Blackbaud" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="80" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-5" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-6" value="&lt;h1&gt;Syncing Profile Data from Blackbaud to BellesBoard&lt;br&gt;&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-9" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QBbDs8d1V5HzIHIY1PE4-8" target="QBbDs8d1V5HzIHIY1PE4-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="410" as="sourcePoint" />
+            <mxPoint x="450" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-10" value="&lt;h1&gt;Search API:&lt;/h1&gt;&lt;p&gt;https://api.sky.blackbaud.com/constituent/v1/constituents/search?search_text={search_text}[&amp;amp;fundraiser_status][&amp;amp;include_inactive][&amp;amp;search_field][&amp;amp;strict_search][&amp;amp;limit][&amp;amp;offset]&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="320" width="790" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-11" value="&lt;h1&gt;Sync API:&lt;/h1&gt;&lt;p&gt;https://api.sky.blackbaud.com/constituent/v1/constituents/{constituent_id}&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="420" width="790" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QBbDs8d1V5HzIHIY1PE4-12" value="&lt;h1&gt;Questions:&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1. Is it advisable to automatically synchronize user profiles every night?&lt;/div&gt;&lt;div&gt;2. Do we need a similar feature for donors as well?&amp;nbsp;&lt;/div&gt;&lt;div&gt;3. Who is responsible for linking an account?&lt;/div&gt;&lt;div&gt;4. Do we need a manual sync-up option in the UI? or something turn off sync option.&lt;/div&gt;&lt;div&gt;5.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="509" width="790" height="230" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
